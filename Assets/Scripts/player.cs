@@ -14,6 +14,9 @@ public class player : MonoBehaviour
     public Transform trans;
     public Rigidbody2D body;
     public Animator anim;
+    public GameObject image;
+    
+
     // Start is called before the first frame update
 
     private void Awake()
@@ -100,6 +103,14 @@ public class player : MonoBehaviour
         if (otherObject.tag == "PortalD")
         {
             SceneManager.LoadScene("Final");
+        }
+
+        if (otherObject.tag == "PortalF")
+        {
+            //image = GameObject.Find("Panel");
+            image.SetActive(true);
+            
+            
         }
     }
 }
